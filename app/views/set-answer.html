@@ -1,0 +1,27 @@
+<div ng-if="!onMobile">
+    <div class="circle {{game.currentPlayer.color}} {{game.currentPlayer.avatar}}"></div>
+    <h3><span ng-class="game.currentPlayer.color + '-text'">{{game.currentPlayer.name}}!</span> What's your {{game.currentQuestion.question}}</h3>
+    <ul>
+     <li ng-repeat="option in game.currentQuestion.options">
+         <button>{{option}}</button>
+     </li>
+    </ul>
+
+</div>
+
+
+<div ng-if="onMobile && user.id == game.currentPlayer.id">
+    <div class="circle {{game.currentPlayer.color}} {{game.currentPlayer.avatar}}"></div>
+    <h3><span ng-class="game.currentPlayer.color + '-text'">{{game.currentPlayer.name}}!</span> What's your {{game.currentQuestion.question}}</h3>
+    <ul>
+       <li ng-repeat="option in game.currentQuestion.options">
+           <button ng-click="setAnswer(option)">{{option}}</button>
+       </li>
+    </ul>
+</div>
+
+
+<div ng-if="onMobile && user.id != game.currentPlayer.id">
+  <div class="circle {{game.currentPlayer.color}} {{game.currentPlayer.avatar}}"></div>
+  <h3><span ng-class="game.currentPlayer.color + '-text'">{{game.currentPlayer.name}}</span> is picking their answer...</h3>
+</div>

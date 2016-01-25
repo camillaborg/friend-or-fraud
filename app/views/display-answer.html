@@ -1,0 +1,40 @@
+<div ng-if="!onMobile">
+    <div class="circle {{game.currentPlayer.color}} {{game.currentPlayer.avatar}}"></div>
+    <h3>And the answer was...</h3>
+    <div class="options">
+        <ul>
+            <li ng-repeat="option in game.currentQuestion.options">
+                <div class="answers">
+                    <div class="answer-circle" ng-repeat="answer in game.currentQuestion.answers.correct" ng-if="option == answer.answer" ng-class="answer.color"></div>
+                    <div class="answer-circle" ng-repeat="answer in game.currentQuestion.answers.wrong" ng-if="option == answer.answer" ng-class="answer.color"></div>
+                </div>
+                <button ng-class="{'correct' : option == game.currentQuestion.selectedAnswer, 'wrong' : option != game.currentQuestion.selectedAnswer}">{{option}}
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div ng-if="onMobile" class="mobile">
+  <div ng-if="user.id == game.currentPlayer.id && game.currentQuestion.answers.correct">
+        <p>{{game.currentQuestion.answers.correct.length}} people answered correctly. You get 1 point!</p>
+        <p>Your current score is {{user.score}}.</p>
+  </div>
+  <div ng-if="user.id == game.currentPlayer.id && !game.currentQuestion.answers.correct.length">
+        <p>Not a single person answered correctly! No points for you.</p>
+        <p>Your current score is {{user.score}}.</p>
+  </div>
+
+   <div ng-if="user.id != game.currentPlayer.id">
+       <div ng-if="user.answer == game.currentQuestion.selectedAnswer">
+         <p>Correct! You earned 1 point.</p>
+         <p>Your current score is {{user.score}}.</p>
+       </div>
+       <div ng-if="user.answer != game.currentQuestion.selectedAnswer">
+         <p>Wrong! No points this round.</p>
+         <p>Your current score is {{user.score}}.</p>
+       </div>
+  </div>
+
+</div>

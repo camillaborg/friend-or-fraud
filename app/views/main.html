@@ -1,0 +1,39 @@
+<div class="big-circle blue" ng-click="howToPlay()"><p class="unselectable">How to Play</p></div>
+    <div class="container main">
+        <div class="overlay" ng-if="howToPlayButton" ng-click="howToPlay()">
+            <div class="how-to-play">How to Play <span ng-click="howToPlay()">&#x2613</span></div>
+        </div>
+        <div ng-if="!onMobile">
+            <div class="row">
+                <h1>Welcome!</h1>
+                <h2>This is your Game ID: <span class="pink-text">{{game.id}}</span></h2>
+            </div>
+            <div class="players row">
+                <div class="player" ng-repeat="player in game.players">
+                    <div class="circle {{player.avatar}} {{player.color}}" ng-class="{'not-ready' : !player.ready}"></div>
+                    <p class="{{player.color}}-text" ng-class="{'not-ready' : !player.ready}">{{player.name}}</p>
+                </div>
+            </div>
+        <p class="red-text">{{validationError.message}}</p>
+        </div>
+    </div>
+
+    <div ng-if="onMobile" class="mobile" ng-switch="state.state">
+        <div ng-switch-when="start">
+            <p>Enter your <span class="pink-text">Game ID</span> below:</p>
+            <input type="text" ng-model="connectID">
+            <button ng-click="connectToGame(connectID)">Connect</button>
+        </div>
+        <div ng-switch-when="connected">
+            <p>Connected to <span class="pink-text">{{game.id}}</span>!</p>
+            <p>What's your name?</p>
+            <input type="text" ng-model="username">
+            <button ng-click="setUser(username)">Submit</button>
+        </div>
+        <div ng-switch-when="registered" class="start">
+            <div class="circle {{user.avatar}} {{user.color}}" ng-class="{'not-ready' : !user.ready}"></div>
+            <p>Welcome, <span ng-class="user.color + '-text'">{{user.name}}</span></p>
+            <div class="ready-button" class="red" ng-class="{'active': user.ready}" ng-click="toggleReady()"><span>Ready</span></div>
+        </div>
+        <p class="red-text">{{validationError.message}}</p>
+    </div>

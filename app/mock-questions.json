@@ -1,0 +1,46 @@
+{
+    "Questions" :
+    [
+        {
+            "question": "favorite pet animal?",
+            "options": ["Dog", "Bunny", "Cat", "Horse"]
+        },
+        {
+            "question": "favorite food?",
+            "options": ["Pizza", "Pasta", "Pancakes", "Pie"]
+        },
+        {
+            "question": "favorite color?",
+            "options": ["Pink", "Blue", "Black", "Green"]
+        },
+        {
+            "question": "favorite wild animal?",
+            "options": ["Monkey", "Tiger", "Lion", "Snake"]
+        },
+        {
+            "question": "favorite tv-show?",
+            "options": ["Friends", "Game of Thrones", "Family Guy", "Sex and the City"]
+        },
+        {
+            "question": "biggest fear?",
+            "options": ["Ghosts", "Elevators", "Sharks", "Spiders"]
+        },
+        {
+            "question": "favorite season?",
+            "options": ["Spring", "Summer", "Autumn", "Winter"]
+        },
+        {
+            "question": "favorite cocktail?",
+            "options": ["Cosmopolitan", "Whiskey-sour", "Mojito", "White Russian"]
+        },
+        {
+            "question": "favorite music genre?",
+            "options": ["Rock", "Pop", "Hip hop", "Electronic"]
+        },
+        {
+            "question": "favorite hobby?",
+            "options": ["Computer games", "Music", "Sports", "Travel"]
+        }
+    ]
+
+}

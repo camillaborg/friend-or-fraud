@@ -1,0 +1,32 @@
+{
+  "name": "friend-or-fraud",
+  "version": "1.0.0",
+  "description": "Javascript 3 Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zatine/friend-or-fraud.git"
+  },
+  "keywords": [
+    "boardgame",
+    "nackademin",
+    "project",
+    "javascript"
+  ],
+  "author": "Camilla Borg, Emma Berglund, Mikaela Grundin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zatine/friend-or-fraud/issues"
+  },
+  "homepage": "https://github.com/Zatine/friend-or-fraud#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

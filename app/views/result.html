@@ -1,0 +1,31 @@
+<div ng-if="!onMobile">
+    <h5>ToPpLiiZZtan</h5>
+    <div class="game-over group">
+        <ul class="game-over-rank">
+            <li>Rank</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <ul class="game-over-name">
+            <li>Name</li>
+            <li>Mikaela</li>
+            <li>Emma</li>
+            <li>Camilla</li>
+        </ul>
+        <ul class="game-over-score">
+            <li>Score</li>
+            <li>500</li>
+            <li>250</li>
+            <li>190</li>
+        </ul>
+    </div>
+    <li><button class="play-again"><a ui-sref="main ">Play again</a></button></li>
+</div>
+
+<div ng-if="onMobile" class="mobile">
+    <p>Your score:</p>
+    <p>1 p</p>
+    <li><button class="play-again-mobile"><a ui-sref="main ">Play again</a></button></li>
+</div>
+</div>

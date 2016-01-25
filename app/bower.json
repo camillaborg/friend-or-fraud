@@ -1,0 +1,30 @@
+{
+  "name": "friend-or-fraud",
+  "homepage": "https://github.com/Zatine/friend-or-fraud",
+  "authors": [
+    "Mikaela Grundin <me@mikaelagrundin.com>"
+  ],
+  "description": "Javascript 3 Project",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "boardgame",
+    "nackademin",
+    "javascript"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-ui-router": "~0.2.15",
+    "firebase": "2.3.2",
+    "angular": "1.4.8",
+    "angularfire": "1.1.3"
+    }
+}
